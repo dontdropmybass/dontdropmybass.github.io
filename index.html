@@ -19,13 +19,15 @@
         <meta name="theme-color" content="#f24236">
 
         <link rel="stylesheet" href="css/materialize.min.css">
-        <link rel="stylesheet" href="css/github-dark.css">
+        <!-- <link rel="stylesheet" href="css/github-dark.css"> -->
+        <link rel="stylesheet" href="css/prism.css">
 
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <script src="js/scale.fix.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.min.js"></script>
+        <script src="js/prism.js"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -47,6 +49,158 @@
                 <h1 class="card-title">Welcome!</h1>
                 <img src="icons/android-chrome-512x512.png"/>
                 <p class="card-content">I <3 Hacking</p>
+            </section>
+            <section class="card-panel">
+                <h1 class="card-panel">Code examples</h1>
+                <code>
+#include <iostream>
+#include <regex>
+#include <sstream>
+#include <vector>
+
+using namespace std;
+
+/**
+ * rationnumber.cpp
+ * calculates proper fractions without reducing to decimal numbers
+ */
+class rationalnumber {
+private:
+  int numerator;
+  int denominator;
+public:
+  void normalize() {
+      if (numerator==0) {
+          denominator = 1;
+      }
+      int n = numerator<denominator?numerator:denominator;
+      for (int i = n ; i > 1 ; i--) {
+          if (numerator%i==0&&denominator%i==0) {
+              numerator /= i;
+              denominator /= i;
+              normalize();
+          }
+      }
+      if (denominator<0) {
+          numerator = -numerator;
+          denominator = -denominator;
+      }
+  }
+
+  rationalnumber() {
+      numerator = 0;
+      denominator = 1;
+  }
+
+  rationalnumber(int n, int d) {
+      numerator = n;
+      denominator = d;
+  }
+
+  rationalnumber(int n) {
+      numerator = n;
+      denominator = 1;
+  }
+
+  int getNumerator() {
+      return numerator;
+  }
+
+  int getDenominator() {
+      return denominator;
+  }
+
+  void setNumerator(int n) {
+      numerator = n;
+  }
+
+  void setDenominator(int n) {
+      denominator = n;
+  }
+
+  static vector<string> split(const string &s, char delim) {
+      stringstream stream(s);
+      string item;
+      vector<string> tokens;
+      while (getline(stream, item, delim)) {
+          tokens.push_back(item);
+      }
+      return tokens;
+  }
+
+  friend void operator >> (istream &input, rationalnumber &r);
+
+  friend ostream& operator << (ostream &output, rationalnumber &r);
+
+  rationalnumber operator + (rationalnumber &r) {
+      int td,rd,num,den;
+      td = this->denominator;
+      num = this->numerator;
+      den = td;
+      rd = r.getDenominator();
+      if (td!=rd) {
+          num *= rd;
+          den *= rd;
+          num += td*r.getNumerator();
+      }
+      else {
+          num += r.getNumerator();
+      }
+      return rationalnumber(num,den);
+  }
+
+  rationalnumber operator - (rationalnumber &r) {
+      int td,rd,num,den;
+      td = this->denominator;
+      num = this->numerator;
+      den = td;
+      rd = r.getDenominator();
+      if (td!=rd) {
+          num *= rd;
+          den *= rd;
+          num -= td*r.getNumerator();
+      }
+      else {
+          num -= r.getNumerator();
+      }
+      return rationalnumber(num,den);
+  }
+
+  rationalnumber operator * (rationalnumber &r) {
+      return rationalnumber(this->numerator*r.getNumerator(),
+                            this->denominator*r.getDenominator());
+  }
+
+  rationalnumber operator / (rationalnumber &r) {
+      return rationalnumber(this->numerator*r.getDenominator(),
+                            this->denominator*r.getNumerator());
+  }
+
+  bool operator == (rationalnumber &r) {
+      return this->numerator*r.getDenominator()==this->denominator*r.getNumerator();
+  }
+
+  bool operator != (rationalnumber &r) {
+      return !(this==&r);
+  }
+
+  bool operator > (rationalnumber &r) {
+      return this->numerator*r.getDenominator()>this->denominator*r.getNumerator();
+  }
+
+  bool operator >= (rationalnumber &r) {
+      return this == &r or this > &r;
+  }
+
+  bool operator < (rationalnumber &r) {
+      return this->numerator*r.getDenominator()<this->denominator*r.getNumerator();
+  }
+
+  bool operator <= (rationalnumber &r) {
+      return this == &r or this < &r;
+  }
+};
+                </code>
             </section>
 
         </section>
