@@ -6,6 +6,16 @@
 
         <title>Alexander Cochrane</title>
 
+        <style>
+        a:link {
+          color: black;
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+        </style>
+
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
         <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
@@ -32,26 +42,34 @@
 
     </head>
     <body>
-        <nav class="center pin-top">
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a>yo</a></li>
-                <li><a>sup</a></li>
-            </ul>
-            <a class="btn dropdown-button white red-text waves-effect s3" data-activates="dropdown1">Section 1</a>
-            <a class="btn white red-text waves-effect s3">Section 2</a>
-            <a class="btn white red-text waves-effect s3">Section 3</a>
-            <a class="btn white red-text waves-effect s3">Section 4</a>
-            <a class="btn white red-text waves-effect s3">Section 5</a>
-	    </nav>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">
+            <img style="height: 64px;" src="icons/android-chrome-512x512.png"/>
+          </a>
+          <ul id="dropdown1" class="dropdown-content">
+              <li><a href="#cpp">C++ Fraction Calculator</a></li>
+              <li><a href="#android">Android Quiz Application</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#about">About Alex</a></li>
+            <li><a class="dropdown-button" data-activates="dropdown1">Code Examples</a></li>
+            <li><a href="http://github.com/dontdropmybass" target="_blank">Fork me on Github!</a></li>
+          </ul>
+        </div>
+      </nav>
         <section class="container">
             <section class="card-panel">
                 <h1 class="card-title">Welcome!</h1>
-                <img src="icons/android-chrome-512x512.png"/>
-                <p class="card-content">I <3 Hacking</p>
+                <p class="card-content"></p>
+            </section>
+            <section class="card-panel">
+              <h1 id="about" class="card-title">About Alex</h1>
             </section>
             <section class="card-panel">
                 <h1 class="card-title">Code examples</h1>
-                <pre><code class="language-java">
+                <h3 class="card-title" id="cpp">C++ Proper Fractions Calculator</h3>
+                <pre><code class="language-cpp">
 /**
  * rationnumber.cpp
  * calculates proper fractions without reducing to decimal numbers
@@ -169,15 +187,15 @@ public:
   }
 
   bool operator == (rationalnumber &r) {
-      return this->numerator*r.getDenominator()==this->denominator*r.getNumerator();
+      return this->numerator*r.getDenominator() ==t his->denominator*r.getNumerator();
   }
 
   bool operator != (rationalnumber &r) {
-      return !(this==&r);
+      return !(this == &r);
   }
 
   bool operator > (rationalnumber &r) {
-      return this->numerator*r.getDenominator()>this->denominator*r.getNumerator();
+      return this->numerator*r.getDenominator() > this->denominator*r.getNumerator();
   }
 
   bool operator >= (rationalnumber &r) {
@@ -185,13 +203,178 @@ public:
   }
 
   bool operator < (rationalnumber &r) {
-      return this->numerator*r.getDenominator()<this->denominator*r.getNumerator();
+      return this->numerator*r.getDenominator() < this->denominator*r.getNumerator();
   }
 
   bool operator <= (rationalnumber &r) {
       return this == &r or this < &r;
   }
 };
+                </code></pre>
+                <br/>
+                <h3 id=android class="card-title">
+                  <a target="_blank" href="https://github.com/dontdropmybass/quiz-builder">
+                    Android Quiz Application
+                  </a>
+                </h3>
+                <pre><code class="language-java">
+package ca.alexcochrane.quizbuilder;
+
+import android.animation.ArgbEvaluator;
+import android.animation.ValueAnimator;
+import android.content.Intent;
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+
+import java.io.IOException;
+import java.util.Map;
+
+import ca.alexcochrane.quizbuilder.util.QuizUtilities;
+
+public class QuizActivity extends AppCompatActivity {
+
+    Map<String,String[]> questions;
+    Map<String,String> answers;
+
+    String question;
+    String[] answer;
+
+    int questionNum;
+
+    int score;
+
+    TextView questionText;
+    TextView possibleAnswers;
+
+    @Override
+    @SuppressWarnings("unchecked")
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_quiz);
+
+        questionText = (TextView) findViewById(R.id.questionText);
+        possibleAnswers = (TextView) findViewById(R.id.possibleAnswers);
+        try {
+            Map[] quiz = QuizUtilities.loadQuiz(this, getIntent().getStringExtra(QuizUtilities.QUESTION_SET));
+            questions = quiz[0];
+            answers = quiz[1];
+            questionNum = 0;
+            nextQuestion();
+        }
+        catch (IOException e) {
+            Log.wtf(QuizUtilities.TAG,e.getCause().getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public void nextQuestion() {
+        questionNum++;
+
+        question = (String) questions.keySet().toArray()[0];
+        answer = (String[]) QuizUtilities.shuffleArray(questions.get(question));
+
+        questionText.setText(question);
+        StringBuilder sb = new StringBuilder();
+        sb.append("Question #").append(questionNum).append(":\n\n");
+        sb.append("A: ").append(answer[0]).append("\n");
+        sb.append("B: ").append(answer[1]).append("\n");
+        sb.append("C: ").append(answer[2]).append("\n");
+        sb.append("D: ").append(answer[3]);
+        possibleAnswers.setText(sb.toString());
+        questions.remove(questionText.getText().toString());
+    }
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button1:
+                if (answers.get(question).equals(answer[0])) {
+                    correct();
+                }
+                else {
+                    incorrect();
+                }
+                break;
+            case R.id.button2:
+                if (answers.get(question).equals(answer[1])) {
+                    correct();
+                }
+                else {
+                    incorrect();
+                }
+                break;
+            case R.id.button3:
+                if (answers.get(question).equals(answer[2])) {
+                    correct();
+                }
+                else {
+                    incorrect();
+                }
+                break;
+            case R.id.button4:
+                if (answers.get(question).equals(answer[3])) {
+                    correct();
+                }
+                else {
+                    incorrect();
+                }
+                break;
+            default:
+                break;
+        }
+        if (questions.size()>0) {
+            nextQuestion();
+        }
+        else {
+            Intent intent = new Intent(this,ShowScoreActivity.class);
+            intent.putExtras(getIntent());
+            intent.putExtra("SCORE",score);
+            startActivity(intent);
+        }
+    }
+
+    public void correct() {
+        score++;
+        if (Build.VERSION.SDK_INT >= 23) {
+            findViewById(R.id.activity_quiz).setBackgroundColor(getColor(R.color.correct));
+        }
+        else {
+            findViewById(R.id.activity_quiz).setBackgroundColor(getResources().getColor(R.color.correct));
+        }
+
+        animateColorWhite(R.color.correct);
+    }
+
+    public void incorrect() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            findViewById(R.id.activity_quiz).setBackgroundColor(getColor(R.color.incorrect));
+        }
+        else {
+            findViewById(R.id.activity_quiz).setBackgroundColor(getResources().getColor(R.color.incorrect));
+        }
+
+        animateColorWhite(R.color.incorrect);
+    }
+
+    public void animateColorWhite(int colorId) {
+        int colorFrom = getResources().getColor(colorId);
+        int colorTo = getResources().getColor(R.color.white);
+        ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
+        colorAnimation.setDuration(1000);
+        colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+
+            @Override
+            public void onAnimationUpdate(ValueAnimator animator) {
+                findViewById(R.id.activity_quiz).setBackgroundColor((int) animator.getAnimatedValue());
+            }
+
+        });
+        colorAnimation.start();
+    }
+}
                 </code></pre>
             </section>
 
