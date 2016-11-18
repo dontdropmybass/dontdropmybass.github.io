@@ -27,6 +27,14 @@
         <script src="js/scale.fix.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+          $(document).on('click', 'a', function(event){
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 500);
+          });
+        </script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -44,6 +52,7 @@
           </ul>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#about">About Alex</a></li>
+            <li><a href="#goals">Goals</a></li>
             <li><a class="dropdown-button" data-activates="dropdown1">Code Examples</a></li>
             <li><a href="http://github.com/dontdropmybass" target="_blank">Fork me on Github!</a></li>
           </ul>
@@ -56,6 +65,17 @@
             </section>
             <section class="card-panel">
               <h1 id="about" class="card-title">About Alex</h1>
+            </section>
+            <section class="card-panel">
+              <h1 id="goals" class="card-title">Alex's Goals</h1>
+              <h3>Who am I?</h3>
+              <p>I am Alexander Cochrane. I am a programming student,
+                  learning Java, C++, Python, and PHP.</p>
+              <h3>Where am I going?</h3>
+              <p>Within the next five years, I hope to work as a programmer.</p>
+              <h3>How am I going to get there?</h3>
+              <p>I am working hard, doing my best to learn as much as possible,
+                  as frequently as possible.</p>
             </section>
             <section class="card-panel">
                 <h1 class="card-title">Code examples</h1>
