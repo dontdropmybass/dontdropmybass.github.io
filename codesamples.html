@@ -1,0 +1,429 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>Alexander Cochrane</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<link rel="stylesheet" href="assets/css/prism.css" />
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+	<!-- Icon/Favicon things -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/icons/manifest.json">
+	<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#f24236">
+	<link rel="shortcut icon" href="/icons/favicon.ico">
+
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+	<meta name="msapplication-config" content="/icons/browserconfig.xml">
+	<meta name="theme-color" content="#f24236">
+</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="icons/safari-pinned-tab.svg" alt="" /></span><span class="title">Alexander Cochrane</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+							<li><a href="codesamples.html"><i class="fa fa-terminal" aria-hidden="true"></i> Code Samples</a></li>
+							<li><a href="http://www.github.com/dontdropmybass" target="_blank"><i class="fa fa-code-fork" aria-hidden="true"></i> Fork me on Github</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Code Samples</h1>
+							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+							<h2>C++ Fractions Calculator</h2>
+							<pre><code class="language-cpp">
+/**
+* rationnumber.cpp
+* calculates proper fractions without reducing to decimal numbers
+*/
+class rationalnumber {
+private:
+int numerator;
+int denominator;
+public:
+void normalize() {
+		if (numerator==0) {
+				denominator = 1;
+		}
+		int n = numerator<denominator?numerator:denominator;
+		for (int i = n ; i > 1 ; i--) {
+				if (numerator%i==0&&denominator%i==0) {
+						numerator /= i;
+						denominator /= i;
+						normalize();
+				}
+		}
+		if (denominator<0) {
+				numerator = -numerator;
+				denominator = -denominator;
+		}
+}
+
+rationalnumber() {
+		numerator = 0;
+		denominator = 1;
+}
+
+rationalnumber(int n, int d) {
+		numerator = n;
+		denominator = d;
+}
+
+rationalnumber(int n) {
+		numerator = n;
+		denominator = 1;
+}
+
+int getNumerator() {
+		return numerator;
+}
+
+int getDenominator() {
+		return denominator;
+}
+
+void setNumerator(int n) {
+		numerator = n;
+}
+
+void setDenominator(int n) {
+		denominator = n;
+}
+
+static vector<string> split(const string &s, char delim) {
+		stringstream stream(s);
+		string item;
+		vector<string> tokens;
+		while (getline(stream, item, delim)) {
+				tokens.push_back(item);
+		}
+		return tokens;
+}
+
+friend void operator >> (istream &input, rationalnumber &r);
+
+friend ostream& operator << (ostream &output, rationalnumber &r);
+
+rationalnumber operator + (rationalnumber &r) {
+		int td,rd,num,den;
+		td = this->denominator;
+		num = this->numerator;
+		den = td;
+		rd = r.getDenominator();
+		if (td!=rd) {
+				num *= rd;
+				den *= rd;
+				num += td*r.getNumerator();
+		}
+		else {
+				num += r.getNumerator();
+		}
+		return rationalnumber(num,den);
+}
+
+rationalnumber operator - (rationalnumber &r) {
+		int td,rd,num,den;
+		td = this->denominator;
+		num = this->numerator;
+		den = td;
+		rd = r.getDenominator();
+		if (td!=rd) {
+				num *= rd;
+				den *= rd;
+				num -= td*r.getNumerator();
+		}
+		else {
+				num -= r.getNumerator();
+		}
+		return rationalnumber(num,den);
+}
+
+rationalnumber operator * (rationalnumber &r) {
+		return rationalnumber(this->numerator*r.getNumerator(),
+													this->denominator*r.getDenominator());
+}
+
+rationalnumber operator / (rationalnumber &r) {
+		return rationalnumber(this->numerator*r.getDenominator(),
+													this->denominator*r.getNumerator());
+}
+
+bool operator == (rationalnumber &r) {
+		return this->numerator*r.getDenominator() ==t his->denominator*r.getNumerator();
+}
+
+bool operator != (rationalnumber &r) {
+		return !(this == &r);
+}
+
+bool operator > (rationalnumber &r) {
+		return this->numerator*r.getDenominator() > this->denominator*r.getNumerator();
+}
+
+bool operator >= (rationalnumber &r) {
+		return this == &r or this > &r;
+}
+
+bool operator < (rationalnumber &r) {
+		return this->numerator*r.getDenominator() < this->denominator*r.getNumerator();
+}
+
+bool operator <= (rationalnumber &r) {
+		return this == &r or this < &r;
+}
+};
+							</code></pre>
+							<h2>Android Quiz Application</h2>
+							<pre><code class="language-java">
+package ca.alexcochrane.quizbuilder;
+
+import android.animation.ArgbEvaluator;
+import android.animation.ValueAnimator;
+import android.content.Intent;
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+
+import java.io.IOException;
+import java.util.Map;
+
+import ca.alexcochrane.quizbuilder.util.QuizUtilities;
+
+public class QuizActivity extends AppCompatActivity {
+
+	Map<String,String[]> questions;
+	Map<String,String> answers;
+
+	String question;
+	String[] answer;
+
+	int questionNum;
+
+	int score;
+
+	TextView questionText;
+	TextView possibleAnswers;
+
+	@Override
+	@SuppressWarnings("unchecked")
+	protected void onCreate(Bundle savedInstanceState) {
+			super.onCreate(savedInstanceState);
+			setContentView(R.layout.activity_quiz);
+
+			questionText = (TextView) findViewById(R.id.questionText);
+			possibleAnswers = (TextView) findViewById(R.id.possibleAnswers);
+			try {
+					Map[] quiz = QuizUtilities.loadQuiz(this, getIntent().getStringExtra(QuizUtilities.QUESTION_SET));
+					questions = quiz[0];
+					answers = quiz[1];
+					questionNum = 0;
+					nextQuestion();
+			}
+			catch (IOException e) {
+					Log.wtf(QuizUtilities.TAG,e.getCause().getMessage());
+					e.printStackTrace();
+			}
+	}
+
+	public void nextQuestion() {
+			questionNum++;
+
+			question = (String) questions.keySet().toArray()[0];
+			answer = (String[]) QuizUtilities.shuffleArray(questions.get(question));
+
+			questionText.setText(question);
+			StringBuilder sb = new StringBuilder();
+			sb.append("Question #").append(questionNum).append(":\n\n");
+			sb.append("A: ").append(answer[0]).append("\n");
+			sb.append("B: ").append(answer[1]).append("\n");
+			sb.append("C: ").append(answer[2]).append("\n");
+			sb.append("D: ").append(answer[3]);
+			possibleAnswers.setText(sb.toString());
+			questions.remove(questionText.getText().toString());
+	}
+
+	public void onClick(View v) {
+			switch (v.getId()) {
+					case R.id.button1:
+							if (answers.get(question).equals(answer[0])) {
+									correct();
+							}
+							else {
+									incorrect();
+							}
+							break;
+					case R.id.button2:
+							if (answers.get(question).equals(answer[1])) {
+									correct();
+							}
+							else {
+									incorrect();
+							}
+							break;
+					case R.id.button3:
+							if (answers.get(question).equals(answer[2])) {
+									correct();
+							}
+							else {
+									incorrect();
+							}
+							break;
+					case R.id.button4:
+							if (answers.get(question).equals(answer[3])) {
+									correct();
+							}
+							else {
+									incorrect();
+							}
+							break;
+					default:
+							break;
+			}
+			if (questions.size()>0) {
+					nextQuestion();
+			}
+			else {
+					Intent intent = new Intent(this,ShowScoreActivity.class);
+					intent.putExtras(getIntent());
+					intent.putExtra("SCORE",score);
+					startActivity(intent);
+			}
+	}
+
+	public void correct() {
+			score++;
+			if (Build.VERSION.SDK_INT >= 23) {
+					findViewById(R.id.activity_quiz).setBackgroundColor(getColor(R.color.correct));
+			}
+			else {
+					findViewById(R.id.activity_quiz).setBackgroundColor(getResources().getColor(R.color.correct));
+			}
+
+			animateColorWhite(R.color.correct);
+	}
+
+	public void incorrect() {
+			if (Build.VERSION.SDK_INT >= 23) {
+					findViewById(R.id.activity_quiz).setBackgroundColor(getColor(R.color.incorrect));
+			}
+			else {
+					findViewById(R.id.activity_quiz).setBackgroundColor(getResources().getColor(R.color.incorrect));
+			}
+
+			animateColorWhite(R.color.incorrect);
+	}
+
+	public void animateColorWhite(int colorId) {
+			int colorFrom = getResources().getColor(colorId);
+			int colorTo = getResources().getColor(R.color.white);
+			ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
+			colorAnimation.setDuration(1000);
+			colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+
+					@Override
+					public void onAnimationUpdate(ValueAnimator animator) {
+							findViewById(R.id.activity_quiz).setBackgroundColor((int) animator.getAnimatedValue());
+					}
+
+			});
+			colorAnimation.start();
+	}
+}
+							</code></pre>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="field half first">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="special" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Alexander Cochrane. All rights reserved</li>
+								<li>Hosted on Github Pages</li>
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/prism.js"></script>
+
+	</body>
+</html>

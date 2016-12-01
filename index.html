@@ -1,398 +1,260 @@
-<!doctype html>
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<head>
+		<title>Alexander Cochrane</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="stylesheet" href="assets/css/prism.css" />
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
-        <title>Alexander Cochrane</title>
+		<!-- Icon/Favicon things -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/icons/manifest.json">
+		<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#f24236">
+		<link rel="shortcut icon" href="/icons/favicon.ico">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
-        <link rel="manifest" href="/icons/manifest.json">
-        <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#f24236">
-        <link rel="shortcut icon" href="/icons/favicon.ico">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+		<meta name="msapplication-config" content="/icons/browserconfig.xml">
+		<meta name="theme-color" content="#f24236">
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
-        <meta name="msapplication-config" content="/icons/browserconfig.xml">
-        <meta name="theme-color" content="#f24236">
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
 
-        <link rel="stylesheet" href="css/materialize.min.css">
-        <!-- <link rel="stylesheet" href="css/github-dark.css"> -->
-        <link rel="stylesheet" href="css/prism.css">
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="icons/safari-pinned-tab.svg" alt="" /></span><span class="title">Alexander Cochrane</span>
+								</a>
 
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
 
-        <script src="js/scale.fix.js"></script>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="js/materialize.min.js"></script>
-        <script type="text/javascript">
-          $(document).on('click', 'a', function(event){
-            event.preventDefault();
-            $('html, body').animate({
-              scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 500);
-          });
-        </script>
+						</div>
+					</header>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+							<li><a href="codesamples.html"><i class="fa fa-terminal" aria-hidden="true"></i> Code Samples</a></li>
+							<li><a href="http://www.github.com/dontdropmybass" target="_blank"><i class="fa fa-code-fork" aria-hidden="true"></i> Fork me on Github</a></li>
+						</ul>
+					</nav>
 
-    </head>
-    <body>
-      <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">
-            <!-- <img style="height: 64px;" src="icons/android-chrome-512x512.png"/> -->
-            <i class="material-icons">spellcheck</i></a>
-          </a>
-          <ul id="dropdown1" class="dropdown-content">
-              <li><a href="#cpp">C++ Fraction Calculator</a></li>
-              <li><a href="#android">Android Quiz Application</a></li>
-          </ul>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#about">About Alex</a></li>
-            <li><a href="#goals">Goals</a></li>
-            <li><a class="dropdown-button" data-activates="dropdown1">Code Examples</a></li>
-            <li><a href="http://github.com/dontdropmybass" target="_blank">Fork me on Github!</a></li>
-          </ul>
-        </div>
-      </nav>
-        <section class="container">
-            <section class="card-panel">
-                <h1 class="card-title">Welcome!</h1>
-                <p class="card-content"></p>
-            </section>
-            <section class="card-panel">
-              <h1 id="about" class="card-title">About Alex</h1>
-            </section>
-            <section class="card-panel">
-              <h1 id="goals" class="card-title">Alex's Goals</h1>
-              <h3>Who am I?</h3>
-              <p>I am Alexander Cochrane. I am a programming student,
-                  learning Java, C++, Python, and PHP.</p>
-              <h3>Where am I going?</h3>
-              <p>Within the next five years, I hope to work as a programmer.</p>
-              <h3>How am I going to get there?</h3>
-              <p>I am working hard, doing my best to learn as much as possible,
-                  as frequently as possible.</p>
-            </section>
-            <section class="card-panel">
-                <h1 class="card-title">Code examples</h1>
-                <h3 class="card-title" id="cpp">C++ Proper Fractions Calculator</h3>
-                <pre><code class="language-cpp">
-/**
- * rationnumber.cpp
- * calculates proper fractions without reducing to decimal numbers
- */
-class rationalnumber {
-private:
-  int numerator;
-  int denominator;
-public:
-  void normalize() {
-      if (numerator==0) {
-          denominator = 1;
-      }
-      int n = numerator<denominator?numerator:denominator;
-      for (int i = n ; i > 1 ; i--) {
-          if (numerator%i==0&&denominator%i==0) {
-              numerator /= i;
-              denominator /= i;
-              normalize();
-          }
-      }
-      if (denominator<0) {
-          numerator = -numerator;
-          denominator = -denominator;
-      }
-  }
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>Alexander Cochrane is a programmer, specializing in Android/Java.</h1>
+								<p>Below are some other programming languages I have learned:</p>
+							</header>
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="images/pic01.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h1><i class="devicon-html5-plain" aria-hidden="true"></i></h1>
+										<div class="content">
+											<p>HTML5</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="images/pic02.jpg" alt="" />
+									</span>
+									<a>
+										<h1><i class="fa fa-css3" aria-hidden="true"></i></h1>
+										<div class="content">
+											<p>CSS3</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="images/pic03.jpg" alt="" />
+									</span>
+									<a>
+										<h1><i class="devicon-javascript-plain"></i></h1>
+										<div class="content">
+											<p>Javascript</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="images/pic04.jpg" alt="" />
+									</span>
+									<a>
+										<h1><i class="devicon-java-plain"></i></h1>
+										<div class="content">
+											<p>Java</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="images/pic05.jpg" alt="" />
+									</span>
+									<a>
+										<h1><i class="devicon-python-plain"></i></h1>
+										<div class="content">
+											<p>Python</p>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="images/pic06.jpg" alt="" />
+									</span>
+									<a>
+										<h1><i class="devicon-cplusplus-plain"></i></h1>
+										<div class="content">
+											<p>C++</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="images/pic07.jpg" alt="" />
+									</span>
+									<a>
+										<h1><i class="devicon-php-plain"></i></h1>
+										<div class="content">
+											<p>PHP</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="images/pic08.jpg" alt="" />
+									</span>
+									<a>
+										<h1><i class="devicon-mysql-plain"></i></h1>
+										<div class="content">
+											<p>MySQL</p>
+										</div>
+									</a>
+								</article>
+								<article class="style1">
+									<span class="image">
+										<img src="images/pic09.jpg" alt="" />
+									</span>
+									<a>
+										<h1><i class="devicon-postgresql-plain"></i></h1>
+										<div class="content">
+											<p>PostgreSQL</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="images/pic10.jpg" alt="" />
+									</span>
+									<a>
+										<h1><i class="devicon-oracle-plain"></i></h1>
+										<div class="content">
+											<p>Oracle SQL</p>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="images/pic11.jpg" alt="" />
+									</span>
+									<a>
+										<h1><i class="devicon-mongodb-plain"></i></h1>
+										<div class="content">
+											<p>MongoDB</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="images/pic12.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h1><i class="devicon-vim-plain"></i></h1>
+										<div class="content">
+											<p>Vi IMproved</p>
+										</div>
+									</a>
+								</article>
+							</section>
+						</div>
+					</div>
 
-  rationalnumber() {
-      numerator = 0;
-      denominator = 1;
-  }
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<div style="display:none" id="thankyou_message">
+									<h1>Thanks for getting in touch!</h1>
+								</div>
+								<form id="gform" method="post" action="https://script.google.com/macros/s/AKfycbxkbXTHvkHnMdhvh_CFMWAHe5P5eICYJbngS9Jkyemhj3gj-9-X/exec">
+									<div class="field half first">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="special" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="http://www.github.com/dontdropmybass" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="tel:+19024522539" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="mailto:alex.g.cochrane@gmail.com" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Alexander Cochrane. All rights reserved</li>
+								<li>Hosted on Github Pages</li>
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
 
-  rationalnumber(int n, int d) {
-      numerator = n;
-      denominator = d;
-  }
+			</div>
 
-  rationalnumber(int n) {
-      numerator = n;
-      denominator = 1;
-  }
-
-  int getNumerator() {
-      return numerator;
-  }
-
-  int getDenominator() {
-      return denominator;
-  }
-
-  void setNumerator(int n) {
-      numerator = n;
-  }
-
-  void setDenominator(int n) {
-      denominator = n;
-  }
-
-  static vector<string> split(const string &s, char delim) {
-      stringstream stream(s);
-      string item;
-      vector<string> tokens;
-      while (getline(stream, item, delim)) {
-          tokens.push_back(item);
-      }
-      return tokens;
-  }
-
-  friend void operator >> (istream &input, rationalnumber &r);
-
-  friend ostream& operator << (ostream &output, rationalnumber &r);
-
-  rationalnumber operator + (rationalnumber &r) {
-      int td,rd,num,den;
-      td = this->denominator;
-      num = this->numerator;
-      den = td;
-      rd = r.getDenominator();
-      if (td!=rd) {
-          num *= rd;
-          den *= rd;
-          num += td*r.getNumerator();
-      }
-      else {
-          num += r.getNumerator();
-      }
-      return rationalnumber(num,den);
-  }
-
-  rationalnumber operator - (rationalnumber &r) {
-      int td,rd,num,den;
-      td = this->denominator;
-      num = this->numerator;
-      den = td;
-      rd = r.getDenominator();
-      if (td!=rd) {
-          num *= rd;
-          den *= rd;
-          num -= td*r.getNumerator();
-      }
-      else {
-          num -= r.getNumerator();
-      }
-      return rationalnumber(num,den);
-  }
-
-  rationalnumber operator * (rationalnumber &r) {
-      return rationalnumber(this->numerator*r.getNumerator(),
-                            this->denominator*r.getDenominator());
-  }
-
-  rationalnumber operator / (rationalnumber &r) {
-      return rationalnumber(this->numerator*r.getDenominator(),
-                            this->denominator*r.getNumerator());
-  }
-
-  bool operator == (rationalnumber &r) {
-      return this->numerator*r.getDenominator() ==t his->denominator*r.getNumerator();
-  }
-
-  bool operator != (rationalnumber &r) {
-      return !(this == &r);
-  }
-
-  bool operator > (rationalnumber &r) {
-      return this->numerator*r.getDenominator() > this->denominator*r.getNumerator();
-  }
-
-  bool operator >= (rationalnumber &r) {
-      return this == &r or this > &r;
-  }
-
-  bool operator < (rationalnumber &r) {
-      return this->numerator*r.getDenominator() < this->denominator*r.getNumerator();
-  }
-
-  bool operator <= (rationalnumber &r) {
-      return this == &r or this < &r;
-  }
-};
-                </code></pre>
-                <br/>
-                <h3 id=android class="card-title">
-                  <a target="_blank" href="https://github.com/dontdropmybass/quiz-builder">
-                    Android Quiz Application
-                  </a>
-                </h3>
-                <pre><code class="language-java">
-package ca.alexcochrane.quizbuilder;
-
-import android.animation.ArgbEvaluator;
-import android.animation.ValueAnimator;
-import android.content.Intent;
-import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
-
-import java.io.IOException;
-import java.util.Map;
-
-import ca.alexcochrane.quizbuilder.util.QuizUtilities;
-
-public class QuizActivity extends AppCompatActivity {
-
-    Map<String,String[]> questions;
-    Map<String,String> answers;
-
-    String question;
-    String[] answer;
-
-    int questionNum;
-
-    int score;
-
-    TextView questionText;
-    TextView possibleAnswers;
-
-    @Override
-    @SuppressWarnings("unchecked")
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
-
-        questionText = (TextView) findViewById(R.id.questionText);
-        possibleAnswers = (TextView) findViewById(R.id.possibleAnswers);
-        try {
-            Map[] quiz = QuizUtilities.loadQuiz(this, getIntent().getStringExtra(QuizUtilities.QUESTION_SET));
-            questions = quiz[0];
-            answers = quiz[1];
-            questionNum = 0;
-            nextQuestion();
-        }
-        catch (IOException e) {
-            Log.wtf(QuizUtilities.TAG,e.getCause().getMessage());
-            e.printStackTrace();
-        }
-    }
-
-    public void nextQuestion() {
-        questionNum++;
-
-        question = (String) questions.keySet().toArray()[0];
-        answer = (String[]) QuizUtilities.shuffleArray(questions.get(question));
-
-        questionText.setText(question);
-        StringBuilder sb = new StringBuilder();
-        sb.append("Question #").append(questionNum).append(":\n\n");
-        sb.append("A: ").append(answer[0]).append("\n");
-        sb.append("B: ").append(answer[1]).append("\n");
-        sb.append("C: ").append(answer[2]).append("\n");
-        sb.append("D: ").append(answer[3]);
-        possibleAnswers.setText(sb.toString());
-        questions.remove(questionText.getText().toString());
-    }
-
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.button1:
-                if (answers.get(question).equals(answer[0])) {
-                    correct();
-                }
-                else {
-                    incorrect();
-                }
-                break;
-            case R.id.button2:
-                if (answers.get(question).equals(answer[1])) {
-                    correct();
-                }
-                else {
-                    incorrect();
-                }
-                break;
-            case R.id.button3:
-                if (answers.get(question).equals(answer[2])) {
-                    correct();
-                }
-                else {
-                    incorrect();
-                }
-                break;
-            case R.id.button4:
-                if (answers.get(question).equals(answer[3])) {
-                    correct();
-                }
-                else {
-                    incorrect();
-                }
-                break;
-            default:
-                break;
-        }
-        if (questions.size()>0) {
-            nextQuestion();
-        }
-        else {
-            Intent intent = new Intent(this,ShowScoreActivity.class);
-            intent.putExtras(getIntent());
-            intent.putExtra("SCORE",score);
-            startActivity(intent);
-        }
-    }
-
-    public void correct() {
-        score++;
-        if (Build.VERSION.SDK_INT >= 23) {
-            findViewById(R.id.activity_quiz).setBackgroundColor(getColor(R.color.correct));
-        }
-        else {
-            findViewById(R.id.activity_quiz).setBackgroundColor(getResources().getColor(R.color.correct));
-        }
-
-        animateColorWhite(R.color.correct);
-    }
-
-    public void incorrect() {
-        if (Build.VERSION.SDK_INT >= 23) {
-            findViewById(R.id.activity_quiz).setBackgroundColor(getColor(R.color.incorrect));
-        }
-        else {
-            findViewById(R.id.activity_quiz).setBackgroundColor(getResources().getColor(R.color.incorrect));
-        }
-
-        animateColorWhite(R.color.incorrect);
-    }
-
-    public void animateColorWhite(int colorId) {
-        int colorFrom = getResources().getColor(colorId);
-        int colorTo = getResources().getColor(R.color.white);
-        ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
-        colorAnimation.setDuration(1000);
-        colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-
-            @Override
-            public void onAnimationUpdate(ValueAnimator animator) {
-                findViewById(R.id.activity_quiz).setBackgroundColor((int) animator.getAnimatedValue());
-            }
-
-        });
-        colorAnimation.start();
-    }
-}
-                </code></pre>
-            </section>
-
-        </section>
-        <footer class="center pin-bottom">
-            <p>Hosted on GitHub Pages &mdash; Theme by <a href="http://materializecss.com">Materialize</a></p>
-        </footer>
-        <script src="js/prism.js"></script>
-    </body>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+	</body>
 </html>
