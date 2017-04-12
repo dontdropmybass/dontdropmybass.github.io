@@ -8,5 +8,5 @@
 
 ## Deliverables
 
-![Screenshot from Emoji Calculator](image/screenshot.png)
+![Screenshot from Emoji Calculator](image/screenshot.png){: width="200px"}
 
