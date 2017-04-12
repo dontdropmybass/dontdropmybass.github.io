@@ -8,7 +8,7 @@
 
 ## Deliverables
 
-![Screenshot from Emoji Calculator](image/screenshot.png){: width="200px"}
+![Screenshot from Emoji Calculator](image/screenshot.png)
 Using a [Tutorial I found on GitHub](https://github.com/fnk0/iOS-Calculator-Tutorial), I created a calculator app for iOS. From there, I refactored the code using what I learned to create the application shown in the picture.
  
  [Click here to check it out](emoji-calculator.zip)
