@@ -1,4 +1,4 @@
-# iOS Application Development in Swift
+<title>iOS Application Development in Swift</title>
 
 # ![iOS Application Development in Swift](image/header.png)
 
