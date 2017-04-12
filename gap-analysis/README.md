@@ -1,4 +1,4 @@
-# [![Web Starter Kit](image/header.png)]
+# ![iOS Application Development in Swift](image/header.png)
 
 ## Overview
 
