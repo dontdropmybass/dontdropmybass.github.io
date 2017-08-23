@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Alexander Cochrane Portfolio</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+        <!-- JQuery -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/icons/manifest.json">
+        <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#f24236">
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+        <!-- Other Theme Elements -->
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+        <meta name="msapplication-config" content="/icons/browserconfig.xml">
+        <meta name="theme-color" content="#da532c">
+        <!-- Custom CSS & Javascript -->
+        <link rel="stylesheet" href="css/style.css"/>
+        <script src="js/script.js"></script>
+    </head>
+
+    <body>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Alexander Cochrane</h1>
+                <p>Software Developer</p>
+                <a href="#about" class="text-white"><i class="material-icons">keyboard_arrow_down</i></a>
+            </div>
+        </div>
+        <section id="about" class="section-orange">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>Who is Alexander Cochrane?</h1>
+                        <!--<p>I am a software developer, having completed my final year in the NSCC Programming course. I am always quick to learn a new concept, and love to apply my skills to new, interesting problems. With my background in music, I really understand the creative process and I am very interested in applying those concepts to different areas, including technology.</p>-->
+                        <p>As a software developer and a musician, I believe it’s important to connect on a creative level with your colleagues. Whether that creativity comes from a jam session or brainstorming session, the end result will be an improved end-user/audience experience. While my credentials may seem in opposition (I graduated from the Music Arts program at NSCC, and most recently, completed the NSCC IT program with a specialization in programming), the two intersect on many levels.</p>
+                        <p>I’m ready to launch into a tech career with a company that values creativity and offers the opportunity for continual learning – I’m a bit obsessive about learning. Working with a variety of clients, solving problems and creating great user experiences are the components of what I’d consider to be a job that fits perfectly.</p>
+                        <p>I’m prepared to roll up my sleeves to achieve my career goals. I show up, on time and ready to work. I like figuring things out, being creative, trouble-shooting and coming up with ways to improve code and ultimately improve the end-user experience. Collaboration, team work and idea sharing are key to development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="languages" class="section-white">
+            <div class="container-fluid">
+                <h1 class="text-center">Experience in many different programming languages!</h1>
+                <p class="text-center">Click on a badge for more information!</p>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <a class="no-underline" onclick="showMoreInfo('java')">
+                            <h2 class="text-center"><i class="devicon-java-plain"></i></h2>
+                            <h1 class="text-center">Java</h1>
+                        </a>
+                        <span id="java-info" style="display:none;">
+                            <p>From learning Java Standard Edition, to applying that knowledge to websites with Enterprise Edition, I have created a lot of different projects using Java. My favourite application of Java is Android, and with that operating system I have created many different applications. As a project, a group of my classmates got together and we created the (now defunct) social networking fitness application <a href="http://kinshift.com/">KinSHIFT</a>.</p>
+                        <a href="java.html">See more examples!</a>
+                        </span>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a class="no-underline" onclick="showMoreInfo('csharp')">
+                            <h2 class="text-center"><i class="devicon-csharp-plain"></i></h2>
+                            <h1 class="text-center">C#</h1>
+                        </a>
+                        <span id="csharp-info" style="display:none;">
+                            <p>Using Windows Forms and the newer UWP system, I have learned how to build applications for the Windows platform, </p>
+                            <a href="csharp.html">See more examples!</a>
+                        </span>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a class="no-underline" onclick="showMoreInfo('cpp')">
+                            <h2 class="text-center"><i class="devicon-cplusplus-plain"></i></h2>
+                            <h1 class="text-center">C++</h1>
+                        </a>
+                        <span id="cpp-info" style="display:none;">
+                            <p><!-- TODO: text here --></p>
+                            <a href="cpp.html">See more examples!</a>
+                        </span>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a class="no-underline" onclick="showMoreInfo('python')">
+                            <h2 class="text-center"><i class="devicon-python-plain"></i></h2>
+                            <h1 class="text-center">Python</h1>
+                        </a>
+                        <span id="python-info" style="display:none;">
+                            <p><!-- TODO: text here --></p>
+                            <a href="python.html">See more examples!</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="threeqs" class="section-blue">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <h1>Where am I now?</h1>
+                        <p></p>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <h1>Where do I want to be?</h1>
+                        <p></p>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <h1>How do I get there?</h1>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
