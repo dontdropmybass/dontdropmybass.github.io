@@ -21,6 +21,9 @@
     <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
     <meta name="msapplication-config" content="/icons/browserconfig.xml">
     <meta name="theme-color" content="#da532c">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 <div class="off-canvas-wrapper">
@@ -28,56 +31,101 @@
         <div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
             <div class="row column">
                 <br>
-                <img class="thumbnail" src="https://placehold.it/550x350">
+                <img class="thumbnail" src="images/alex.jpg">
                 <h5>Alexander Cochrane</h5>
                 <p>A musician at heart, and a software developer by trade, I have the creativity to have a vision, and the ability to follow it through.</p>
+                <p>Email: <a href="mailto:alex.g.cochrane@gmail.com">alex.g.cochrane@gmail.com</a></p>
+                <p>Call or text: <a href="tel:+19024522539">+1 902 452 2539</a></p>
             </div>
         </div>
         <div class="off-canvas-content" data-off-canvas-content>
             <div class="title-bar hide-for-large">
                 <div class="title-bar-left">
                     <button class="menu-icon" type="button" data-open="my-info"></button>
-                    <span class="title-bar-title">Mike Mikerson</span>
+                    <span class="title-bar-title">Alexander Cochrane</span>
                 </div>
             </div>
             <div class="callout primary">
                 <div class="row column">
                     <h1>Hello! Welcome to my portfolio.</h1>
-                    <p class="lead"><p>As a software developer and a musician, I believe it’s important to connect on a creative level with your colleagues. Whether that creativity comes from a jam session or brainstorming session, the end result will be an improved end-user/audience experience. While my credentials may seem in opposition (I graduated from the Music Arts program at NSCC, and most recently, completed the NSCC IT program with a specialization in programming), the two intersect on many levels.<br/><br/>I’m ready to launch into a tech career with a company that values creativity and offers the opportunity for continual learning – I’m a bit obsessive about learning. Working with a variety of clients, solving problems and creating great user experiences are the components of what I’d consider to be a job that fits perfectly.<br/><br/>I’m prepared to roll up my sleeves to achieve my career goals. I show up, on time and ready to work. I like figuring things out, being creative, trouble-shooting and coming up with ways to improve code and ultimately improve the end-user experience. Collaboration, team work and idea sharing are key to development.<br/><br/><a href="alex-cochrane-resume.pdf">Check out my resume,</a> or see some of my work samples below.</p>
+                    <p class="lead"><p>As a software developer and a musician, I believe it’s important to connect on a creative level with your colleagues. Whether that creativity comes from a jam session or brainstorming session, the end result will be an improved end-user/audience experience. While my credentials may seem in opposition (I graduated from the Music Arts program at NSCC, and most recently, completed the NSCC IT program with a specialization in programming), the two intersect on many levels.<br/><br/>I’m ready to launch into a tech career with a company that values creativity and offers the opportunity for continual learning – I’m a bit obsessive about learning. Working with a variety of clients, solving problems and creating great user experiences are the components of what I’d consider to be a job that fits perfectly.<br/><br/>I’m prepared to roll up my sleeves to achieve my career goals. I like figuring things out, being creative, trouble-shooting and coming up with ways to improve code and ultimately improve the end-user experience. Collaboration, team work and idea sharing are key to development.<br/><br/><a href="alex-cochrane-resume.pdf">Check out my resume,</a> or see some of my work samples below.</p>
                 </div>
             </div>
-            <div class="row small-up-2 medium-up-3 large-up-4">
+            <div class="row column">
+                <h1>Projects</h1>
+            </div>
+            <div class="row small-up-2 medium-up-3 large-up-4" id="gallery">
+
                 <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
-                    <h5>My Site</h5>
+                    <a id="astar" href="#astar-text" class="overlay">
+                        <div class="imageoverlay">
+                            <div class="overlaytext">
+                                <h4><i class="devicon-cplusplus-plain"></i></h4>
+                            </div>
+                            <img class="thumbnail landscape" src="images/thumbs/pathfinder.png">
+                        </div>
+                        <h5>A* Maze Pathfinder</h5>
+                    </a>
                 </div>
+
                 <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
-                    <h5>My Site</h5>
+                    <a id="kinshift" href="#kinshift-text" class="overlay">
+                        <div class="imageoverlay">
+                            <div class="overlaytext overlaytext-black">
+                                <h4><i class="devicon-android-plain"></i></h4>
+                            </div>
+                            <img class="thumbnail portrait" src="images/thumbs/kinshift.png">
+                        </div>
+                        <h5>KinSHIFT: Social Fitness</h5>
+                    </a>
                 </div>
+
                 <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
-                    <h5>My Site</h5>
+                    <a id="robot" href="#robot-text" class="overlay">
+                        <div class="imageoverlay">
+                            <div class="overlaytext overlaytext">
+                                <h4><i class="devicon-python-plain"></i></h4>
+                            </div>
+                            <img class="thumbnail portrait" src="images/thumbs/robot.png">
+                        </div>
+                        <h5>Self-Driving Car Project</h5>
+                    </a>
                 </div>
+
                 <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
-                    <h5>My Site</h5>
+                    <a id="warlizard" href="#warlizard-text" class="overlay">
+                        <div class="imageoverlay">
+                            <div class="overlaytext overlaytext-black">
+                                <h4><i class="devicon-javascript-plain"></i></h4>
+                            </div>
+                            <img class="thumbnail portrait" src="images/thumbs/warlizard.png">
+                        </div>
+                        <h5>Warlizard Anonymous Gaming Forum</h5>
+                    </a>
                 </div>
-                <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
-                    <h5>My Site</h5>
+
+            </div>
+
+            <div id="showcase">
+                <div id="astar-text" class="callout primary" hidden>
+                    <h4>A* Maze Pathfinder</h4>
+                    <p>Given a formatted maze with an entrance in the top left and an exit in the bottom right, this program will find the quickest route from start to finish, assuming there is one. After researching many different pathfinding algorithms, my teammate and I decided that a modified <a href="http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html">A* pathfinding algorithm</a> was the best algorithm to use to solve this problem. Once we figured out the algorithm we were going to use, the only thing left to do was to build the program around it. This taught us about new algorithms we had not used before, and taught us how to use these algorithms to solve actual problems.</p>
+                    <p><a href="https://github.com/brandonchristen/Data-Structures-Maze-Pathfinding/tree/master/data-structures-maze-pathfinding/data-structures-maze-pathfinding">Check out the source code here</a></p>
                 </div>
-                <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
-                    <h5>My Site</h5>
+                <div id="kinshift-text" class="callout primary" hidden>
+                    <h4>KinSHIFT: Social Fitness Application</h4>
+                    <p>Over a few months in the summer of 2016, a small collection of my classmates and I created our own company. Once we were finished school, we took a few days off the recuperate, and then began the process of learning the Android development environment, which we had never used before. We learned the basics of Java in school, but it was mostly just to teach the logic of programming. This single semester of Java, while helpful, was not enough to do what we wanted to do in Android. Our Linux learning helped while we set up servers for our back end and project management.</p><p>Our first app, KinSHIFT, was a social media engine for connecting like-minded individuals who want to exercise, but do not have the motivation to do it alone. On several occasions we had the rewrite large amounts of the application, due to code merge conflicts, or just untraceable bugs. This, along with the fact that we did not know what we were doing caused us to take a lot longer than we had originally planned.</p><p>Once we were back to school, the project was pushed to the back burner, and eventually scrapped due to our busy schedules. Unfortunately, this project was never completed.</p>
                 </div>
-                <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
-                    <h5>My Site</h5>
+                <div id="robot-text" class="callout primary" hidden>
+                    <h4>Self-Driving Car Project</h4>
+                    <p>As a self-directed project, two of my classmates and I created a scratch made RC car that used image stream processing to drive itself. It drove by following a line of tape on the ground, similar to a self driving car following the lines on the road. The car was modelled using online 3d design platform <a href="https://www.tinkercad.com/">TinkerCAD</a>, then printed using a 3d printer. It was a relatively successful project, allowing us to learn about AI, and certain mechanical design principles.</p>
+                    <p><a href="https://github.com/BenCovey/Self-Driving-Car-Capstone">Check out the source code here</a></p>
                 </div>
-                <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
-                    <h5>My Site</h5>
+                <div id="warlizard-text" class="callout primary" hidden>
+                    <h4>Warlizard Anonymous Gaming Forum</h4>
+                    <p>Our team began work on creating our final project for Rich Internet applications on March 27th 2017. We started off by thinking of what backend technology we should use and someone recommended PHP BB. However, after a meeting we agreed that PHP BB would be very difficult if not impossible to do our own custom server scripting, as most functionality is built-in. After we had decided what backend we would be working with, we then re-thought the entire structure of our application. We did not want to deal with storing user information, as well as posts and comments given the limited time frame we were working with, so we decided to allow users to post anonymously. Our group completed the project, and had utilized team collaboration software to aid our development process to an extraordinary degree. In total there were 70 pushes to github, countless hours of  team communication via slack, as well as various group meetings to ensure we were creating a project that we could feel confident in, as well as one that met our own quality standards.</p>
+                    <p><a href="https://github.com/dontdropmybass/warlizard-gaming-forum">Check out the source code here</a> or <a href="http://warlizard.alexcochrane.ca/">See it live!</a></p>
+                    <p class="content-warning">Online Interactions Not Rated by the ESRB</p>
                 </div>
             </div>
             <hr>
@@ -106,7 +154,6 @@
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
 <script>
     $(document).foundation();
