@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a69df725-d012-42b2-8708-4641a3dddaaa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/alex.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/thumbs/kinshift.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/thumbs/pathfinder.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/thumbs/robot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/thumbs/warlizard.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
     </list>
     <ignored path="dontdropmybass.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="33" column="59" lean-forward="false" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+            <state relative-caret-position="491">
+              <caret line="116" column="1156" lean-forward="false" selection-start-line="116" selection-start-column="1156" selection-end-line="116" selection-end-column="1156" />
               <folding />
             </state>
           </provider>
@@ -273,7 +266,7 @@
       <workItem from="1501700897827" duration="15000" />
       <workItem from="1501700935657" duration="24000" />
       <workItem from="1503505632641" duration="5638000" />
-      <workItem from="1503589084762" duration="9064000" />
+      <workItem from="1503589084762" duration="9464000" />
     </task>
     <task id="LOCAL-00001" summary="redid layout, starting over">
       <created>1503510194577</created>
@@ -282,11 +275,25 @@
       <option name="project" value="LOCAL" />
       <updated>1503510194578</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed a typo in kinshift description">
+      <created>1503603886465</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1503603886465</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed another typo in kinshift description">
+      <created>1503603915445</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1503603915445</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36510000" />
+    <option name="totallyTimeSpent" value="36910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -327,7 +334,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="redid layout, starting over" />
-    <option name="LAST_COMMIT_MESSAGE" value="redid layout, starting over" />
+    <MESSAGE value="fixed a typo in kinshift description" />
+    <MESSAGE value="fixed another typo in kinshift description" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed another typo in kinshift description" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -692,8 +701,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="33" column="59" lean-forward="false" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+        <state relative-caret-position="491">
+          <caret line="116" column="1156" lean-forward="false" selection-start-line="116" selection-start-column="1156" selection-end-line="116" selection-end-column="1156" />
           <folding />
         </state>
       </provider>
