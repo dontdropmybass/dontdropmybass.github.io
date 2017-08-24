@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a69df725-d012-42b2-8708-4641a3dddaaa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/alex.jpg" afterPath="$PROJECT_DIR$/images/alex.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
@@ -27,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="116" column="949" lean-forward="false" selection-start-line="116" selection-start-column="949" selection-end-line="116" selection-end-column="949" />
+            <state relative-caret-position="428">
+              <caret line="125" column="192" lean-forward="true" selection-start-line="125" selection-start-column="192" selection-end-line="125" selection-end-column="192" />
               <folding />
             </state>
           </provider>
@@ -267,7 +266,7 @@
       <workItem from="1501700897827" duration="15000" />
       <workItem from="1501700935657" duration="24000" />
       <workItem from="1503505632641" duration="5638000" />
-      <workItem from="1503589084762" duration="10529000" />
+      <workItem from="1503589084762" duration="10610000" />
     </task>
     <task id="LOCAL-00001" summary="redid layout, starting over">
       <created>1503510194577</created>
@@ -304,11 +303,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503604619619</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="new picture and other wording changes">
+      <created>1503605407658</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1503605407658</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37975000" />
+    <option name="totallyTimeSpent" value="38056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -353,7 +359,8 @@
     <MESSAGE value="fixed another typo in kinshift description" />
     <MESSAGE value="reworded kinshift thing a bit" />
     <MESSAGE value="wording changes to sound like a better person" />
-    <option name="LAST_COMMIT_MESSAGE" value="wording changes to sound like a better person" />
+    <MESSAGE value="new picture and other wording changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="new picture and other wording changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -718,8 +725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="116" column="949" lean-forward="false" selection-start-line="116" selection-start-column="949" selection-end-line="116" selection-end-column="949" />
+        <state relative-caret-position="428">
+          <caret line="125" column="192" lean-forward="true" selection-start-line="125" selection-start-column="192" selection-end-line="125" selection-end-column="192" />
           <folding />
         </state>
       </provider>
