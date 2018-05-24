@@ -1,0 +1,15 @@
+.input-area {
+    margin: 0 auto;
+}
+
+h6 {
+    color: rgb(0, 102, 153);
+}
+
+h5 {
+    color: rgb(153, 204, 51);
+}
+
+a:hover {
+    color: #ff9933;
+}

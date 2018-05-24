@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BBBS Renew Prototype</title>
+    <script type="application/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='et-gf-open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' type='text/css' media='all' />
+    <link rel='stylesheet' id='et_monarch-css-css'  href='https://bigbrothersbigsisters.ca/wp-content/plugins/monarch/css/style.css?ver=1.3.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css'  href='https://bigbrothersbigsisters.ca/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.5.1' type='text/css' media='all' />
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        #rs-demo-id {}
+    </style>
+    <link rel='stylesheet' id='fancybox-css'  href='https://bigbrothersbigsisters.ca/wp-content/plugins/fancy-gallery-pro/fancybox/fancybox.css?ver=2.1.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='fancy-gallery-template-default-gallery-template-css'  href='https://bigbrothersbigsisters.ca/wp-content/plugins/fancy-gallery-pro/templates/default/gallery-default.css?ver=4.8.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='fancy-gallery-template-fancy-fancy-css'  href='https://bigbrothersbigsisters.ca/wp-content/plugins/fancy-gallery-pro/templates/fancy-fancy/fancy-fancy.css?ver=4.8.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='fancy-gallery-template-one-thumbnail-only-css'  href='https://bigbrothersbigsisters.ca/wp-content/plugins/fancy-gallery-pro/templates/one-thumbnail/one-thumbnail.css?ver=4.8.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='fancy-gallery-template-thumbnails-image-title-with-share-buttons-css'  href='https://bigbrothersbigsisters.ca/wp-content/plugins/fancy-gallery-pro/templates/thumbnails-share-buttons/thumbnails-share-buttons.css?ver=4.8.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css'  href='https://bigbrothersbigsisters.ca/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.css?ver=1' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-pagenavi-css'  href='https://bigbrothersbigsisters.ca/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+    <link rel='stylesheet' id='Google-Fonts-Istok-css'  href='https://fonts.googleapis.com/css?family=Istok+Web%3A400%2C700&#038;ver=4.8.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='Normalizer-css'  href='https://bigbrothersbigsisters.ca/wp-content/themes/bbbsc/normalize.css?ver=4.8.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='owl.carousel-css'  href='https://bigbrothersbigsisters.ca/wp-content/themes/bbbsc/owl.carousel2_2/dist/assets/owl.carousel.css?ver=4.8.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='owl.theme-css'  href='https://bigbrothersbigsisters.ca/wp-content/themes/bbbsc/owl.carousel2_2/dist/assets/owl.theme.default.css?ver=4.8.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-grid-css'  href='https://bigbrothersbigsisters.ca/wp-content/themes/bbbsc/style-grid.css?ver=4.8.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='Main-css'  href='https://bigbrothersbigsisters.ca/wp-content/themes/bbbsc/style.css?ver=1.05' type='text/css' media='all' />
+    <link rel='stylesheet' id='style2-css'  href='https://bigbrothersbigsisters.ca/wp-content/themes/bbbsc/style2.css?ver=4.8.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='vc_plugin_table_style_css-css'  href='https://bigbrothersbigsisters.ca/wp-content/plugins/easy-tables-vc/assets/css/style.css?ver=1.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='vc_plugin_themes_css-css'  href='https://bigbrothersbigsisters.ca/wp-content/plugins/easy-tables-vc/assets/css/themes.css?ver=4.8.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css'  href='https://bigbrothersbigsisters.ca/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.2.1' type='text/css' media='all' />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="content-container">
+<div class="wpb_column vc_column_container vc_col-sm-3"><!-- TODO: icon here --></div>
+<div class="wpb_column vc_column_container vc_col-sm-6" id="middle-column">
+    <div class="wpb_wrapper">
+        <div id="buttons">
+            <h2>Can you donate that item?</h2>
+            <p style="text-align: center">
+                <a href="#" class="su-button su-button-style-flat" style="color:#FFFFFF;background-color:#ff9933;border-color:#663399;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" id="showItems">
+                    <span style="color:#FFFFFF;padding:8px 24px;font-size:18px;line-height:27px;border-color:#ffb870;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none">
+                        Click Here to Find Out
+                    </span>
+                </a>
+                <a href="#" class="su-button su-button-style-flat" style="color:#FFFFFF;background-color:#ff9933;border-color:#663399;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px" id="showPostCodeDates" hidden>
+                    <span style="color:#FFFFFF;padding:8px 24px;font-size:18px;line-height:27px;border-color:#ffb870;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;text-shadow:none;-moz-text-shadow:none;-webkit-text-shadow:none">
+                        Find a Pickup Time
+                    </span>
+                </a>
+            </p>
+        </div>
+        <div id="forms">
+            <a href="#" id="backButton" hidden>
+                <i class="fas fa-undo"></i>&nbsp;Start over</a><br/>
+
+            <div id="itemSearchForm" hidden>
+                <h2>What item would you like to donate?</h2>
+                <div class="input-area">
+                    <span><input title="Item to Search" type="text" id="itemToSearch" name="itemToSearch" style=""/></span>
+                    <a href="#" id="itemSearchSubmit"><i class="fas fa-search"></i></a>
+                </div>
+                <p id="itemText" hidden></p>
+            </div>
+
+            <div id="postCodeSearchForm" hidden>
+                <h2 id="postCodeTitle">Yes! We will pick it up!</h2>
+                <h5 id="postCodeSubtitle"></h5>
+                <h6>Enter your postal code to find a scheduled pickup date:</h6>
+                <div class="input-area">
+                    <span><input title="Postal Code" type="text" id="postalCode" name="postalCode"/></span>
+                    <a href="#" id="postCodeSubmit"><i class="fas fa-search"></i></a>
+                </div>
+                <p id="postalCodeText" hidden></p>
+            </div>
+
+            <div id="valueVillageLocation" hidden>
+                <h2>We accept that item, but unfortunately cannot pick it up.</h2>
+                <h5 id="valueVillageSubtitle">If you want to donate this item, we ask that you drop it off at Value Village Bayer's Lake</h5>
+                <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=Value+Village,+Bayers+Lake,+NS&zoom=14&size=600x300&maptype=terrain
+&markers=color:0x663399%7Clabel:Value+Village%7C44.6450458,-63.6689728
+&key=AIzaSyAhlmvdIXLMJLeCvpHhs9Gp7XnfWxuV85U"/>
+            </div>
+
+            <div id="schedulePickup" hidden>
+                <h2>Let's get a pickup scheduled!</h2>
+                <h5>Please enter your contact info, and we will get you a pickup time for: </h5>
+                <h5 id="pickupDate"></h5>
+                <div class="input-area">
+                    <label for="scheduleName">Name: </label><br/>
+                    <input id="scheduleName" type="text" name="scheduleName" title="Enter your name here"/><br/>
+                    <label for="scheduleAddress">Address: </label><br/>
+                    <textarea id="scheduleAddress" name="scheduleAddress"></textarea><br/>
+                    <input id="scheduleSubmit" type="button" name="scheduleSubmit" value="Submit">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+    <div class="wpb_column vc_column_container vc_col-sm-3"><!-- for spacing --></div>
+</div>
+</body>
+
+
+<script src="js/item-lookup.js"></script>
+</html>
