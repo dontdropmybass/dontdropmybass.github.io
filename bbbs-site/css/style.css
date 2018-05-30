@@ -1,15 +1,15 @@
-.input-area {
-    margin: 0 auto;
-}
-
-h6 {
-    color: rgb(0, 102, 153);
-}
-
-h5 {
-    color: rgb(153, 204, 51);
-}
-
 a:hover {
     color: #ff9933;
+}
+
+.half {
+    float: left;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#binMap {
+    height: 300px;
+    width: 100%;
 }

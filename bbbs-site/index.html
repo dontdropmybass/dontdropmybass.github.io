@@ -77,29 +77,84 @@
                 <p id="itemText" hidden></p>
             </div>
 
-            <div id="postCodeSearchForm" hidden>
+            <!-- TODO: Uncomment once backend post code dates are up -->
+            <!--<div id="postCodeSearchForm" hidden>
                 <h2 id="postCodeTitle">Yes! We will pick it up!</h2>
-                <h5 id="postCodeSubtitle"></h5>
-                <h6>Enter your postal code to find a scheduled pickup date:</h6>
+                <h5 style="color: rgb(153, 204, 51);id="postCodeSubtitle"></h5>
+                <h6 style="color: rgb(0, 102, 153);">Enter your postal code to find a scheduled pickup date:</h6>
                 <div class="input-area">
                     <span><input title="Postal Code" type="text" id="postalCode" name="postalCode"/></span>
                     <a href="#" id="postCodeSubmit"><i class="fas fa-search"></i></a>
                 </div>
                 <p id="postalCodeText" hidden></p>
-            </div>
+            </div>-->
 
             <div id="valueVillageLocation" hidden>
                 <h2>We accept that item, but unfortunately cannot pick it up.</h2>
-                <h5 id="valueVillageSubtitle">If you want to donate this item, we ask that you drop it off at Value Village Bayer's Lake</h5>
+                <h5 style="color: rgb(153, 204, 51);" id="valueVillageSubtitle">If you want to donate this item, we ask that you drop it off at Value Village Bayer's Lake</h5>
                 <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=Value+Village,+Bayers+Lake,+NS&zoom=14&size=600x300&maptype=terrain
 &markers=color:0x663399%7Clabel:Value+Village%7C44.6450458,-63.6689728
 &key=AIzaSyAhlmvdIXLMJLeCvpHhs9Gp7XnfWxuV85U"/>
             </div>
 
+            <div id="dropOff" hidden>
+                <h2>Yes! We will pick it up!</h2>
+                <h5 style="color: rgb(153, 204, 51);" id="dropOffSubtitle"></h5>
+                <div class="half">
+                    <h6 style="color: rgb(0, 102, 153);">Please provide your contact details and we will touch base to schedule a pick up time...</h6>
+                    <form id="contactForm" class="input-area" action="https://formspree.io/alex.g.cochrane@gmail.com" method="POST" style="width: 100%; margin: 0;">
+                        <div id="formError" hidden>
+                            <p style="color: red;">Please fill in every form area!</p>
+                        </div>
+                        <ul style="list-style-type: none; width: 100%; margin: 0;">
+                            <li style="width: 100%; margin: 0;">
+                                <label for="name">Name: </label><br/>
+                                <input id="name" type="text" name="name" title="Enter your name here" style="width: 100%; margin: 0;"/><br/>
+                            </li>
+                            <li style="width: 100%; margin: 0;">
+                                <label for="address">Street Address: </label><br/>
+                                <input type="text" id="address" name="address" style="width: 100%; margin: 0;"/><br/>
+                            </li>
+                            <li>
+                                <label for="postalCode">Postal Code:</label><br/>
+                                <input type="text" id="postalCode" name="postalCode" style="width: 100%; margin: 0;"/><br/>
+                            </li>
+                            <li style="width: 100%; margin: 0;">
+                                <label for="phone">Phone Number:</label><br/>
+                                <input id="phone" type="tel" name="phone" style="width: 100%; margin: 0;"/><br/>
+                                <label for="phoneType">Phone Type:</label>
+                                <select id="phoneType" name="phoneType">
+                                    <option value="landline">Landline</option>
+                                    <option value="cell">Cell</option>
+                                </select>
+                            </li>
+                            <li style="width: 100%; margin: 0;">
+                                <label for="email">Email:</label><br/>
+                                <input id="email" type="email" name="email" style="width: 100%; margin: 0;"/><br/>
+                            </li>
+                            <li style="width: 100%; margin: 0;">
+                                <input type="text" name="_gotcha" style="display:none" />
+                                <!--TODO: Uncomment before release
+                                <input type="hidden" name="_next" value="https://halifax.bigbrothersbigsisters.ca/ways-to-give/clothing-donations/?formSubmitted=1" />-->
+                                <input type="hidden" name="_next" value="https://alexcochrane.ca/bbbs-site?formSubmitted=1"/>
+                                <input id="contactSubmit" type="submit" value="Submit" style="width: 100%; margin: 0;"/>
+                            </li>
+                        </ul>
+                    </form>
+                    <div id="contactFormSubmitted" hidden>
+                        <h2 style="color: #FF9933;">Thank you! We will contact you soon to schedule a pickup.</h2>
+                    </div>
+                </div>
+                <div class="half">
+                    <h6 style="color: rgb(0, 102, 153);">...Or you can drop it off to one of our many donation locations. </h6>
+                    <!--<div id="binMap"></div>-->
+                    <iframe id="binMap" src="https://maps.esp.tl/maps/_Bin-Locations-Big-Brothers-Big-Sisters-of-Greater-Halifax/pages/map.jsp?geoMapId=164327&TENANT_ID=154719"></iframe>
+            </div>
+
             <div id="schedulePickup" hidden>
                 <h2>Let's get a pickup scheduled!</h2>
-                <h5>Please enter your contact info, and we will get you a pickup time for: </h5>
-                <h5 id="pickupDate"></h5>
+                <h5 style="color: rgb(153, 204, 51);">Please enter your contact info, and we will get you a pickup time for: </h5>
+                <h5 style="color: rgb(153, 204, 51);" id="pickupDate"></h5>
                 <div class="input-area">
                     <label for="scheduleName">Name: </label><br/>
                     <input id="scheduleName" type="text" name="scheduleName" title="Enter your name here"/><br/>
