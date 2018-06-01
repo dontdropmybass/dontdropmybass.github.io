@@ -2,20 +2,31 @@ function showMoreInfo(language) {
     $("#"+language+"-info").slideToggle();
 }
 
+let delay = 0;
+
 $(function() {
 
     $("a").click(function(e) {
         if (this.hash !== "") {
             event.preventDefault();
-            var hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function() {
-                window.location.hash = hash;
+            let hash = this.hash;
+            $("#astar-text").slideUp();
+            $("#kinshift-text").slideUp();
+            $("#robot-text").slideUp();
+            $("#warlizard-text").slideUp();
+            $("#donation-text").slideUp();
+            $(hash).delay(delay).slideDown(400, function() {
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function() {
+                    window.location.hash = hash;
+                    delay = 400;
+                });
             });
         }
     });
 
+    /*
     $("#astar").click(function(){
         $("#astar-text").show();
         $("#kinshift-text").hide();
@@ -43,5 +54,5 @@ $(function() {
         $("#robot-text").hide();
         $("#warlizard-text").show();
     });
-
+    */
 });
